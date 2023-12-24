@@ -17,6 +17,15 @@
                         <form method="post" action="{{ route('updateProfile') }}">
                             @method("PUT")
                             @csrf
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Name</label>
                                 <input name="name" type="text" class="form-control" value="{{ auth()->user()->name }}">

@@ -37,7 +37,7 @@ class AuthController extends Controller
     {
         $request->validate([
             'name' => "required|string",
-            'email' => "required|string|email",
+            'email' => "required|string|email|unique:users,email",
             'password' => "required|min:4",
             'confirm_password' => "required|same:password"
         ]);
@@ -59,7 +59,7 @@ class AuthController extends Controller
     {
         $val = Validator::make($request->all(), [
             'name' => "required|string",
-            'email' => "required|string|email",
+            'email' => "required|unique:users,email,".auth()->user()->id,
             'password' => "nullable|min:4",
         ]);
         if ($val->fails()){
