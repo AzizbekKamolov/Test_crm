@@ -1,22 +1,30 @@
-> Laravel sample website with content retrieving from [prismic.io](https://prismic.io)
+# Getting started
 
-This project runs with Laravel version 5.5.
+## Installation
 
-## Getting started
+Clone the repository
 
+    git clone git@github.com:gothinkster/laravel-realworld-example-app.git
 
+Switch to the repo folder
 
-``` bash
-# install dependencies
-composer install
+    cd laravel-realworld-example-app
 
-# create .env file and generate the application key
-cp .env.example .env
-php artisan key:generate
+Install all the dependencies using composer
 
+    composer install
 
-Then launch the server:
+Copy the example env file and make the required configuration changes in the .env file
 
-``` bash
-php artisan serve
-```
+    cp .env.example .env
+
+Generate a new application key
+
+    php artisan key:generate
+Run the database migrations (**Set the database connection in .env before migrating**)
+
+    php artisan migrate --seed
+
+Start the local development server
+
+    php artisan serve
