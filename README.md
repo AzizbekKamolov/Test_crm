@@ -4,11 +4,11 @@
 
 Clone the repository
 
-    git clone git@github.com:gothinkster/laravel-realworld-example-app.git
+    git clone https://github.com/AzizbekKamolov/Test_crm.git
 
 Switch to the repo folder
 
-    cd laravel-realworld-example-app
+    cd Test_crm
 
 Install all the dependencies using composer
 
