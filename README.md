@@ -21,6 +21,7 @@ Copy the example env file and make the required configuration changes in the .en
 Generate a new application key
 
     php artisan key:generate
+    
 Run the database migrations (**Set the database connection in .env before migrating**)
 
     php artisan migrate --seed
